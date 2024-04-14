@@ -14,7 +14,9 @@ jobs:
         uses: biomejs/setup-biome@v2.1.1
         with:
           version: latest
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
       - name: Run Biome
         run: biome ci src
       - name: Run tests
-        run: bun test tests
+        run:  test tests
