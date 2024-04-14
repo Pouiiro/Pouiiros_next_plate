@@ -7,6 +7,7 @@ export const items = [
 	"Tailwind",
 	"Next themes",
 	"Biome",
-	"Vitest",
-	"React testing library"
+	"Bun testing",
+	"React testing library",
+	"Playwright"
 ]

@@ -19,8 +19,10 @@ The plate currently includes:
 -   Zod
 -   Tailwind
 -   Next themes
--   Eslint (pre-configured with plugins)
--   Prettier (pre-configured with plugins)
+-   Biome
+-   Bun testing
+-   React testing library
+-   Playwright
 
 ## Getting Started <a name = "getting_started"></a>
 

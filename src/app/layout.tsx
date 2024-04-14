@@ -40,6 +40,16 @@ export default function RootLayout({ children }: Props) {
 				<Providers>
 					<ThemeToggler />
 					{children}
+					<h4 className="fixed inset-x-0 bottom-0 flex justify-center items-end pb-8">
+						Made with &hearts; by
+						<a
+							href="https://www.pouiiro.com"
+							target="_blank"
+							rel="noreferrer"
+							className="ml-1 font-medium italic text-blue-900 dark:text-blue-400 animate-pulse">
+							Pouiiro
+						</a>
+					</h4>
 				</Providers>
 			</body>
 		</html>
