@@ -1,36 +1,35 @@
-'use client'
+"use client"
 
-import { useRouter } from 'next/navigation'
-
-import { Button } from '@/components/ui/button'
-import { Label } from '@/components/ui/label'
+import { Button } from "@/components/ui/button"
+import { Label } from "@/components/ui/label"
+import Link from "next/link"
 
 const About = () => {
-    const route = useRouter()
+	const items = [
+		"shadcn",
+		"darkmode",
+		"lucide react",
+		"react hook form",
+		"zod",
+		"tailwind",
+		"next themes",
+		"biome"
+	]
 
-    const items = [
-        'shadcn',
-        'darkmode',
-        'lucide react',
-        'react hook form',
-        'zod',
-        'tailwind',
-        'next themes',
-        'eslint',
-        'prettier',
-    ]
+	return (
+		<main className="flex min-h-screen flex-col items-center justify-center gap-6 p-24">
+			<Label>List of things included:</Label>
+			<ul>
+				{items.map((label) => (
+					<li key={label}>* {label}</li>
+				))}
+			</ul>
 
-    return (
-        <main className='flex min-h-screen flex-col items-center justify-center gap-6 p-24'>
-            <Label>List of things included:</Label>
-            <ul>
-                {items.map((label, key) => (
-                    <li key={key}>* {label}</li>
-                ))}
-            </ul>
-            <Button onClick={() => route.push('/')}>Go back home</Button>
-        </main>
-    )
+			<Link href="/">
+				<Button>Go back home</Button>
+			</Link>
+		</main>
+	)
 }
 
 export default About

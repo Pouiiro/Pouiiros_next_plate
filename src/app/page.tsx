@@ -1,19 +1,17 @@
-'use client'
+"use client"
 
-import { useRouter } from 'next/navigation'
+import Link from "next/link"
 
-import { Button } from '@/components/ui/button'
-import { Label } from '@/components/ui/label'
+import { Button } from "@/components/ui/button"
+import { Label } from "@/components/ui/label"
 
 export default function Home() {
-    const route = useRouter()
-
-    return (
-        <main className='flex min-h-screen flex-col items-center justify-center gap-6 p-24'>
-            <Label>Hello world and welcome to Pouiiro&rsquo;s next 🍽️</Label>
-            <Button onClick={() => route.push('about')}>
-                What is included?
-            </Button>
-        </main>
-    )
+	return (
+		<main className="flex min-h-screen flex-col items-center justify-center gap-6 p-24">
+			<Label>Hello world and welcome to Pouiiro&rsquo;s next 🍽️</Label>
+			<Link href="/about">
+				<Button>What is included?</Button>
+			</Link>
+		</main>
+	)
 }
