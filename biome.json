@@ -4,7 +4,8 @@
 		"enabled": true
 	},
 	"formatter": {
-		"enabled": true
+		"enabled": true,
+		"ignore": ["node_modules", "public", "dist", "bin"]
 	},
 	"linter": {
 		"ignore": ["node_modules", "public", "dist", "bin"],
@@ -40,7 +41,7 @@
 			"attributePosition": "auto",
 			"indentStyle": "tab",
 			"quoteStyle": "double",
-      "indentWidth": 4
+			"indentWidth": 4
 		}
 	}
 }
