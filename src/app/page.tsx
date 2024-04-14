@@ -3,12 +3,13 @@
 import Link from "next/link"
 
 import { Button } from "@/components/ui/button"
-import { Label } from "@/components/ui/label"
 
 export default function Home() {
 	return (
 		<main className="flex min-h-screen flex-col items-center justify-center gap-6 p-24">
-			<Label>Hello world and welcome to Pouiiro&rsquo;s next 🍽️</Label>
+			<h1 className="font-semibold">
+				Hello world and welcome to Pouiiro&rsquo;s next 🍽️
+			</h1>
 			<Link href="/about">
 				<Button>What is included?</Button>
 			</Link>

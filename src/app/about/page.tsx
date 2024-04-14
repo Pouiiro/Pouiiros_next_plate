@@ -1,27 +1,19 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { Label } from "@/components/ui/label"
 import Link from "next/link"
 
-const About = () => {
-	const items = [
-		"shadcn",
-		"darkmode",
-		"lucide react",
-		"react hook form",
-		"zod",
-		"tailwind",
-		"next themes",
-		"biome"
-	]
+import { Button } from "@/components/ui/button"
+import { items } from "@/constants/about"
 
+const About = () => {
 	return (
 		<main className="flex min-h-screen flex-col items-center justify-center gap-6 p-24">
-			<Label>List of things included:</Label>
-			<ul>
-				{items.map((label) => (
-					<li key={label}>* {label}</li>
+			<h1 id="items-heading" className="font-semibold">
+				List of things included:
+			</h1>
+			<ul aria-label="items-heading">
+				{items.map((item) => (
+					<li key={item}>{item}</li>
 				))}
 			</ul>
 
