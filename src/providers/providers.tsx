@@ -1,5 +1,5 @@
-import { ThemeProvider } from "next-themes"
-import type { ReactNode } from "react"
+import { ThemeProvider } from 'next-themes'
+import type { ReactNode } from 'react'
 
 type Props = {
 	children: ReactNode | ReactNode[]
@@ -7,7 +7,7 @@ type Props = {
 
 const Providers = ({ children }: Props) => {
 	return (
-		<ThemeProvider enableSystem attribute="class" defaultTheme="dark">
+		<ThemeProvider enableSystem attribute='class' defaultTheme='dark'>
 			{children}
 		</ThemeProvider>
 	)

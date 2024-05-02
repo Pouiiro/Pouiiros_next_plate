@@ -19,4 +19,12 @@ test("Test E2E", async ({ page }) => {
 	})
 
 	await page.getByRole("link", { name: "Go back home" }).click()
+	await expect(page).toHaveURL("/")
+	await page.goto("/UnknownPage404")
+	await expect(page.locator("h1")).toHaveText("404 - Not found")
+	await expect(page.locator("p")).toHaveText(
+		"The requested content is not available"
+	)
+	await page.getByRole("link", { name: "Go back home" }).click()
+	await expect(page).toHaveURL("/")
 })

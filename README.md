@@ -23,6 +23,8 @@ The plate currently includes:
 -   Bun testing
 -   React testing library
 -   Playwright
+-   GET example
+-   POST example
 
 ## Getting Started <a name = "getting_started"></a>
 

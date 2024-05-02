@@ -1,22 +1,23 @@
-import type { Metadata } from "next"
-import { Inter as FontSans } from "next/font/google"
-import type { ReactNode } from "react"
+import type { Metadata } from 'next'
+import { Inter as FontSans } from 'next/font/google'
+import type { ReactNode } from 'react'
 
-import { ThemeToggler } from "@/components/common/themeToggler"
-import { cn } from "@/lib/utils"
-import Providers from "@/providers/providers"
-import { themeSetter } from "@/scripts/theme"
-import "@/styles/globals.css"
+import { ThemeToggler } from '@/components/common/themeToggler'
+import { cn } from '@/lib/utils'
+import Providers from '@/providers/providers'
+import { themeSetter } from '@/scripts/theme'
+import '@/styles/globals.css'
+
+export const dynamic = 'force-dynamic'
 
 const fontSans = FontSans({
-	subsets: ["latin"],
-	variable: "--font-sans"
+	subsets: ['latin'],
+	variable: '--font-sans'
 })
 
 export const metadata: Metadata = {
 	title: "Pouiiro's next plate",
-	description:
-		"Pouiiro's next plate is a nextjs boilerplate with basic needs."
+	description: "Pouiiro's next plate is a nextjs boilerplate with basic needs."
 }
 
 type Props = {
@@ -25,7 +26,7 @@ type Props = {
 
 export default function RootLayout({ children }: Props) {
 	return (
-		<html lang="en" suppressHydrationWarning>
+		<html lang='en' suppressHydrationWarning>
 			<head>
 				{themeSetter && (
 					// biome-ignore lint/security/noDangerouslySetInnerHtml: <need this to fix theme flicker>
@@ -34,19 +35,19 @@ export default function RootLayout({ children }: Props) {
 			</head>
 			<body
 				className={cn(
-					"min-h-screene font-sans antialiased transition-all duration-200",
+					'min-h-screene font-sans antialiased transition-all duration-200',
 					fontSans.variable
 				)}>
 				<Providers>
 					<ThemeToggler />
 					{children}
-					<h4 className="fixed inset-x-0 bottom-0 flex justify-center items-end pb-8">
+					<h4 className='fixed inset-x-0 bottom-0 flex justify-center items-end pb-8'>
 						Made with &hearts; by
 						<a
-							href="https://www.pouiiro.com"
-							target="_blank"
-							rel="noreferrer"
-							className="ml-1 font-medium italic text-blue-900 dark:text-blue-400 animate-pulse">
+							href='https://www.pouiiro.com'
+							target='_blank'
+							rel='noreferrer'
+							className='ml-1 font-medium italic text-blue-900 dark:text-blue-400 animate-pulse'>
 							Pouiiro
 						</a>
 					</h4>

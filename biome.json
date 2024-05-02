@@ -5,7 +5,8 @@
 	},
 	"formatter": {
 		"enabled": true,
-		"ignore": ["node_modules", "public", "dist", "bin"]
+		"ignore": ["node_modules", "public", "dist", "bin"],
+		"formatWithErrors": true
 	},
 	"linter": {
 		"ignore": ["node_modules", "public", "dist", "bin"],
@@ -22,8 +23,6 @@
 				"useConsistentArrayType": "error"
 			},
 			"nursery": {
-				"noUselessTernary": "error",
-				"useJsxKeyInIterable": "error",
 				"noDuplicateJsonKeys": "error"
 			}
 		}
@@ -33,15 +32,15 @@
 			"arrowParentheses": "always",
 			"bracketSameLine": true,
 			"bracketSpacing": true,
-			"jsxQuoteStyle": "double",
+			"jsxQuoteStyle": "single",
 			"quoteProperties": "asNeeded",
 			"semicolons": "asNeeded",
 			"trailingComma": "none",
 			"enabled": true,
 			"attributePosition": "auto",
 			"indentStyle": "tab",
-			"quoteStyle": "double",
-			"indentWidth": 4
+			"quoteStyle": "single",
+			"indentWidth": 2
 		}
 	}
 }

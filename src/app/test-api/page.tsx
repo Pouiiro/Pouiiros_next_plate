@@ -1,24 +1,23 @@
-'use client'
-
 import Link from 'next/link'
 
 import { Button } from '@/components/ui/button'
-import { items } from '@/constants/about'
 
 const About = () => {
 	return (
 		<main className='flex min-h-screen flex-col items-center justify-center gap-6 p-24'>
 			<h1 id='items-heading' className='font-semibold'>
-				List of things included:
+				API test
 			</h1>
-			<ul aria-label='items-heading'>
-				{items.map((item) => (
-					<li key={item}>{item}</li>
-				))}
-			</ul>
-
+			<div className='flex flex-row gap-5'>
+				<Link href='/test-api/get-example'>
+					<Button>GET</Button>
+				</Link>
+				<Link href='/test-api/post-example'>
+					<Button>POST</Button>
+				</Link>
+			</div>
 			<Link href='/'>
-				<Button>Go back home</Button>
+				<Button>Go back</Button>
 			</Link>
 		</main>
 	)
