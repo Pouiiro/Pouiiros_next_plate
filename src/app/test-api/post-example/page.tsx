@@ -6,7 +6,6 @@ import { useState } from 'react'
 import { FormProvider, useForm } from 'react-hook-form'
 import { z } from 'zod'
 
-import Loading from '@/app/loading'
 import { PostResult } from '@/app/test-api/post-example/postResult'
 import { Button } from '@/components/ui/button'
 import {
@@ -19,6 +18,7 @@ import {
 import { Input } from '@/components/ui/input'
 import type { PostResponse } from '@/types/apiResponse'
 import { postData } from './doRequest'
+import Loading from './loading'
 
 const formSchema = z.object({
 	name: z.string().min(2, {
